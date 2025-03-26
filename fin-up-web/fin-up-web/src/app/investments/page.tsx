@@ -5,7 +5,7 @@ import NavBar from "@/components/nav-bar";
 export default function InvestmentsPage(){
     return(
         <>
-           <NavBar active="investmentos" />
+           <NavBar active="investimentos" />
 
             <main className="flex justify-center">
                 <div className="bg-slate-900 min-w-2/3 m-6 p-6 rounded">
