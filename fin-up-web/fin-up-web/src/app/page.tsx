@@ -1,8 +1,9 @@
-import DashboardPage from "./dashboard/page";
+
+import InvestmentsPage from "./investments/page";
 
 
 export default function Home() {
   return (
-    <DashboardPage/>
+    <InvestmentsPage/>
   );
 }
