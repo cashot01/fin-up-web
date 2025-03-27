@@ -25,7 +25,7 @@ export default function NavBar(props: NavBarProps) {
                 )}
 
             </ul>
-            <img className="size-12 rounded-full" src="http://github.com/joaocarloslima.png" alt="" />
+            <img className="size-12 rounded-full" src="http://github.com/cashot01.png" alt="" />
         </nav>
     )
 }

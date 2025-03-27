@@ -1,7 +1,6 @@
 import InvestmentItem from "@/components/investment-item";
 import NavBar from "@/components/nav-bar";
 
-
 export default function InvestmentsPage(){
     return(
         <>
