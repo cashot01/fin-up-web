@@ -1,4 +1,4 @@
-interface Category {
+interface Investment {
     id: number,
     name: string,
     icon: string

@@ -19,23 +19,23 @@ const initialState= {
     }
 }
 
-export default function CategoryFormPage(){
+export default function InvestmentFormPage(){
     const [state, formAction, pending] = useActionState(createInvestment, initialState)
     
     return (
         <>
-           <NavBar active="categorias" />
+           <NavBar active="investimentos" />
 
             <main className="flex justify-center">
                 <div className="border-2 border-sky-600 min-w-2/3 m-6 p-6 rounded">
-                    <h2 className="text-lg font-bold text-sky-600">Cadastrar Categoria</h2>
+                    <h2 className="text-lg font-bold text-sky-600">Cadastrar Investimento</h2>
 
                     <form action={formAction} className="space-y-4 mt-4">
                         
                         <div>
                             <Input 
                                 name="name" 
-                                placeholder="nome da categoria" 
+                                placeholder="nome do investimento" 
                                 aria-invalid={!!state?.errors.name} 
                                 defaultValue={state?.values.name}
                             />
@@ -46,7 +46,7 @@ export default function CategoryFormPage(){
                             <Input 
                                 className="text-stone-900"
                                 name="icon" 
-                                placeholder="ícone da categoria" 
+                                placeholder="ícone do investimento" 
                                 aria-invalid={!!state?.errors.icon}
                                 defaultValue={state?.values.icon}
                              />
@@ -55,7 +55,7 @@ export default function CategoryFormPage(){
 
                         <div className="flex justify-between">
                             <Button className="bg-sky-600" asChild variant={"outline"}>
-                                <Link href="/categories">
+                                <Link href="/investments">
                                     <ArrowLeft />
                                     Cancelar
                                 </Link>

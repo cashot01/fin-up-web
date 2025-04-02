@@ -1,13 +1,13 @@
 "use client"
 import { getInvestments } from "@/actions/investment-actions";
-import CategoryItem from "@/components/investment-item";
+import InvestmentItem from "@/components/investment-item";
 import NavBar from "@/components/nav-bar";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
 export default async function InvestmentsPage() {
-    const data: Category[] = await getInvestments()
+    const data: Investment[] = await getInvestments()
 
     return (
         <>
@@ -27,8 +27,8 @@ export default async function InvestmentsPage() {
                     </div>
 
                     {data.length == 0 ?
-                        <p className="text-stone-900">Nenhuma categoria cadastrada</p> :
-                        data.map(category => <CategoryItem key={category.id} category={category} />)
+                        <p className="text-stone-900">Nenhum investimento cadastrado</p> :
+                        data.map(investment => <InvestmentItem key={investment.id} investment={investment} />)
                     }
 
                 </div>

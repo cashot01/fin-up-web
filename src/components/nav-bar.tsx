@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface NavBarProps {
-    active: "dashboard" | "movimentações" | "categorias"
+    active: "dashboard" | "carteira" | "investimentos"
 }
 
 export default function NavBar(props: NavBarProps) {
@@ -10,13 +10,13 @@ export default function NavBar(props: NavBarProps) {
 
     const links = [
         { text: "dashboard", href: "/dashboard" },
-        { text: "movimentações", href: "/transactions" },
-        { text: "categorias", href: "/categories" },
+        { text: "carteira", href: "/wallet" },
+        { text: "investimentos", href: "/investments" },
     ]
 
     return (
         <nav className="flex justify-between items-center bg-sky-600 p-6">
-            <h1 className="text-3xl font-bold">CashUp</h1>
+            <h1 className="text-3xl font-bold">FinUp</h1>
             <ul className="flex gap-4">
                 {links.map(link =>
                     <li key={link.text} className={active === link.text ? activeClass : ""}>
@@ -25,7 +25,7 @@ export default function NavBar(props: NavBarProps) {
                 )}
 
             </ul>
-            <img className="size-12 rounded-full" src="http://github.com/joaocarloslima.png" alt="" />
+            <img className="size-12 rounded-full" src="http://github.com/cashot01.png" alt="" />
         </nav>
     )
 }
