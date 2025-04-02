@@ -1,6 +1,6 @@
 "use client"
 
-import { createCategory } from "@/actions/category-actions";
+import { createInvestment } from "@/actions/investment-actions";
 import NavBar from "@/components/nav-bar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,7 +20,7 @@ const initialState= {
 }
 
 export default function CategoryFormPage(){
-    const [state, formAction, pending] = useActionState(createCategory, initialState)
+    const [state, formAction, pending] = useActionState(createInvestment, initialState)
     
     return (
         <>

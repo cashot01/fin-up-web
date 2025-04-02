@@ -1,14 +1,14 @@
 import { redirect } from "next/navigation"
 
-const API_URL = "http://localhost:8080/categories"
+const API_URL = "http://localhost:8080/investments"
 
-export async function getCategories() {
+export async function getInvestments() {
     const response = await fetch(API_URL)
     return await response.json()
 }
 
 
-export async function createCategory(initialState: any, formData: FormData){
+export async function createInvestment(initialState: any, formData: FormData){
     const data = {
         name: formData.get("name"),
         icon: formData.get("icon")
@@ -39,5 +39,5 @@ export async function createCategory(initialState: any, formData: FormData){
         }
     }
 
-    redirect("/categories")
+    redirect("/investments")
 }
